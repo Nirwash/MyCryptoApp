@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ProgressBar
 import com.nirwashh.android.mycryptoapp.R
 import com.nirwashh.android.mycryptoapp.databinding.ActivityMainBinding
 import com.nirwashh.android.mycryptoapp.fragments.CurrenciesListFragment
@@ -12,10 +13,17 @@ import com.nirwashh.android.mycryptoapp.fragments.CurrenciesListFragment
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
+    companion object {
+        var progress: ProgressBar? = null
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        progress = binding.progress
 
         if (savedInstanceState == null) {
             supportFragmentManager
@@ -39,5 +47,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        progress = null
     }
 }
