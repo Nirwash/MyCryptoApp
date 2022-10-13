@@ -2,6 +2,6 @@
     <string name="app_name">MyCryptoApp</string>
     <string name="the_index_is_calculated">The rating TOP-100 cryptocurrencies by market capitalization. \nPowered by CoinGecko API</string>
     <string name="rate_this_app_button_text">Rate This App</string>
-    <string name="market_cap">Market Cap </string>
-    <string name="price">Price $ </string>
+    <string name="market_cap">Market Cap\u0020</string>
+    <string name="price">Price $</string>
 </resources>

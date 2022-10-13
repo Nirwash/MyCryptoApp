@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.nirwashh.android.mycryptoapp.R
+import java.math.BigDecimal
 
 class CurrenciesAdapter : BaseAdapter<CurrenciesAdapter.CurrencyViewHolder>() {
 
@@ -32,28 +33,28 @@ class CurrenciesAdapter : BaseAdapter<CurrenciesAdapter.CurrencyViewHolder>() {
                 Glide.with(view.context).load(item.image).into(ivCurrencyIcon)
                 tvCurrencySym.text = item.symbol
                 tvCurrencyName.text = item.name
-                tvCurrencyMarketCap.text = item.marketCap
-                tvCurrencyPrice.text = item.price.toString()
+                tvCurrencyMarketCap.text = item.marketCap.toString()
+                tvCurrencyPrice.text = item.currentPrice.toString()
             }
         }
 
     }
 
     data class Currency(
-        val id: String,
-        val symbol: String,
-        val name: String,
-        val image: String,
-        val price: Float,
-        val marketCap: String,
-        val marketCapRank: Int,
-        val totalVolume: Float,
-        val priceChangePercentage24h: Float,
-        val marketCapChangePercentage24h: Float,
+        val ath: Double,
+        val athChangePercentage: Double,
         val circulatingSupply: Double,
-        val totalSupply: Long,
-        val ath: Float,
-        val athChangePercentage: Float
+        val currentPrice: Double,
+        val id: String,
+        val image: String,
+        val marketCap: Long,
+        val marketCapChangePercentage24h: Double,
+        val marketCapRank: Int,
+        val name: String,
+        val priceChangePercentage24h: Double,
+        val symbol: String,
+        val totalSupply: Double,
+        val totalVolume: Double
     )
 
 }
