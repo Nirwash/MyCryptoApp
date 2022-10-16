@@ -3,6 +3,8 @@
     <dimen name="regular_horizontal_margin">8dp</dimen>
     <dimen name="vertical_margin">12dp</dimen>
     <dimen name="big_horizontal_margin">16dp</dimen>
+    <dimen name="big_vertical_margin">16dp</dimen>
     <dimen name="regular_vertical_margin">8dp</dimen>
     <dimen name="large_padding">16dp</dimen>
+    <dimen name="tiny_vertical_margin">2dp</dimen>
 </resources>
