@@ -3,6 +3,7 @@ package com.nirwashh.android.mycryptoapp.rest
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Part
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface CoinGeckoApi {
@@ -18,7 +19,7 @@ interface CoinGeckoApi {
 
     @GET("coins/{id}/market_chart")
     fun getCoinMarketChart(
-        @Part("id") id: String,
+        @Path("id") id: String,
         @Query("vs_currency") vsCurrency: String = "usd",
         @Query("days") days: String = "max"
     ): Observable<GeckoCoinChart>
