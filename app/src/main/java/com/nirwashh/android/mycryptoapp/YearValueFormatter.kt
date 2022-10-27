@@ -2,6 +2,7 @@ package com.nirwashh.android.mycryptoapp
 
 import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.formatter.IAxisValueFormatter
+import dagger.Provides
 import java.util.*
 
 class YearValueFormatter : IAxisValueFormatter {

@@ -21,6 +21,7 @@ class LatestChart {
     @Inject
     lateinit var formatter: YearValueFormatter
 
+
     lateinit var chart: LineChart
 
     init {

@@ -1,5 +1,6 @@
 package com.nirwashh.android.mycryptoapp.di
 
+import com.nirwashh.android.mycryptoapp.activities.ChartActivity
 import com.nirwashh.android.mycryptoapp.activities.MainActivity
 import com.nirwashh.android.mycryptoapp.chart.LatestChart
 import com.nirwashh.android.mycryptoapp.fragments.CurrenciesListFragment
@@ -17,4 +18,5 @@ interface AppComponent {
     fun inject(presenter: LatestChartPresenter)
     fun inject(fragment: CurrenciesListFragment)
     fun inject(chart: LatestChart)
+    fun inject(activity: ChartActivity)
 }
